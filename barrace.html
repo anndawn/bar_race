@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bar Chart Race</title>
+</head>
+<body>
+<style>
+	.observablehq-update2{
+		display: none
+	}
+.observablehq-update
+	{
+		display: none
+	}
+ .O-1{
+		font-size: 15;
+		font-weight: bold
+	}
+</style>
+<div id="observablehq-00c20736">
+  <div class="observablehq-viewof-n_string"></div>
+  <div class="observablehq-update"></div>
+  <div class="observablehq-viewof-keyframe"></div>
+  <div class="observablehq-legend"></div>
+  <div class="observablehq-chart"></div>
+  <div class="observablehq-linechart2"></div>
+  <div class="observablehq-update2"></div>
+</div>
+<script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  import define from "https://api.observablehq.com/@anndawn/bar-chart-race.js?v=3";
+  (new Runtime).module(define, name => {
+    if (name === "viewof n_string") return Inspector.into("#observablehq-00c20736 .observablehq-viewof-n_string")();
+    if (name === "update") return Inspector.into("#observablehq-00c20736 .observablehq-update")();
+    if (name === "viewof keyframe") return Inspector.into("#observablehq-00c20736 .observablehq-viewof-keyframe")();
+    if (name === "legend") return Inspector.into("#observablehq-00c20736 .observablehq-legend")();
+    if (name === "chart") return Inspector.into("#observablehq-00c20736 .observablehq-chart")();
+    if (name === "linechart2") return Inspector.into("#observablehq-00c20736 .observablehq-linechart2")();
+    if (name === "update2") return Inspector.into("#observablehq-00c20736 .observablehq-update2")();
+  });
+</script>
