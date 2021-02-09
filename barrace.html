@@ -6,37 +6,95 @@
 </head>
 <body>
 <style>
-	.observablehq-update2{
+.observablehq-update2{
 		display: none
 	}
-.observablehq-update
+.observablehq-update  
 	{
 		display: none
 	}
- .O-1{
-		font-size: 15;
-		font-weight: bold
+.observablehq-legend  
+	{
+		margin-top:10px
 	}
+ .O-1{
+		font-size: 15px;
+		font-weight: bold;
+	    font-family: Cambria, Georgia, serif
+	}
+	.observablehq-viewof-duration {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-family: Cambria, Georgia, serif
+	}
+	output{
+		font-family: Cambria, Georgia, serif !important;
+		font-size: 0.85rem !important
+	}
+	select{
+		font-family: Cambria, Georgia, serif !important
+	}
+	button{
+		font-family: Cambria, Georgia, serif !important
+	}
+	.observablehq-viewof-n-string .observablehq {
+		padding-top: 10px;
+		padding-bottom: 10px
+	}
+/*
+	.observablehq-viewof-duration div {
+		display: inline
+	}
+*/
+	.observablehq-viewof-n_string form div{
+		display: inline;
+		font-family: Cambria, Georgia, serif
+	}
+	.observablehq-viewof-duration form div{
+		display: inline;
+		
+	}
+	.observablehq-viewof-n_string form div div{
+		padding-left: 20px
+	}
+	.observablehq-viewof-duration form div div{
+		padding-left: 20px
+	}
+	#stock-market-change{
+		font-family: Cambria, Georgia, serif
+	}
+/*
+	.observablehq-viewof-n_string  form{
+		display: inline
+	}
+*/
 </style>
-<div id="observablehq-00c20736">
+<div id="observablehq-e6c37a18">
+  <div class="observablehq-Title"></div>
   <div class="observablehq-viewof-n_string"></div>
+  <div class="observablehq-viewof-duration"></div>
+  <div class="observablehq-viewof-keyframe_date"></div>
   <div class="observablehq-update"></div>
-  <div class="observablehq-viewof-keyframe"></div>
   <div class="observablehq-legend"></div>
   <div class="observablehq-chart"></div>
   <div class="observablehq-linechart2"></div>
   <div class="observablehq-update2"></div>
+  
+  <div class="observablehq-viewof-keyframes"></div>
 </div>
 <script type="module">
   import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
   import define from "https://api.observablehq.com/@anndawn/bar-chart-race.js?v=3";
   (new Runtime).module(define, name => {
-    if (name === "viewof n_string") return Inspector.into("#observablehq-00c20736 .observablehq-viewof-n_string")();
-    if (name === "update") return Inspector.into("#observablehq-00c20736 .observablehq-update")();
-    if (name === "viewof keyframe") return Inspector.into("#observablehq-00c20736 .observablehq-viewof-keyframe")();
-    if (name === "legend") return Inspector.into("#observablehq-00c20736 .observablehq-legend")();
-    if (name === "chart") return Inspector.into("#observablehq-00c20736 .observablehq-chart")();
-    if (name === "linechart2") return Inspector.into("#observablehq-00c20736 .observablehq-linechart2")();
-    if (name === "update2") return Inspector.into("#observablehq-00c20736 .observablehq-update2")();
+    if (name === "Title") return Inspector.into("#observablehq-e6c37a18 .observablehq-Title")();
+    if (name === "viewof n_string") return Inspector.into("#observablehq-e6c37a18 .observablehq-viewof-n_string")();
+    if (name === "update") return Inspector.into("#observablehq-e6c37a18 .observablehq-update")();
+    if (name === "viewof keyframe_date") return Inspector.into("#observablehq-e6c37a18 .observablehq-viewof-keyframe_date")();
+    if (name === "legend") return Inspector.into("#observablehq-e6c37a18 .observablehq-legend")();
+    if (name === "chart") return Inspector.into("#observablehq-e6c37a18 .observablehq-chart")();
+    if (name === "linechart2") return Inspector.into("#observablehq-e6c37a18 .observablehq-linechart2")();
+    if (name === "update2") return Inspector.into("#observablehq-e6c37a18 .observablehq-update2")();
+    if (name === "viewof duration") return Inspector.into("#observablehq-e6c37a18 .observablehq-viewof-duration")();
+    if (name === "viewof keyframes") return Inspector.into("#observablehq-e6c37a18 .observablehq-viewof-keyframes")();
   });
 </script>
