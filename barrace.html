@@ -6,6 +6,9 @@
 </head>
 <body>
 <style>
+h2#2020-quiver-stock-selections{ display:none!important}
+	h3 {text-align: center;margin: 0}
+	h5 {text-align: center;margin-top: 2px;margin-bottom: 5px}
 .observablehq-update2{
 		display: none
 	}
@@ -13,69 +16,78 @@
 	{
 		display: none
 	}
-.observablehq-legend  
-	{
-		margin-top:10px
-	}
+
+
  .O-1{
-		font-size: 15px;
+		font-size: 12px;
 		font-weight: bold;
 	    font-family: Cambria, Georgia, serif
-	}
-	.observablehq-viewof-duration {
-		padding-top: 10px;
-		padding-bottom: 10px;
-		font-family: Cambria, Georgia, serif
-	}
-	output{
-		font-family: Cambria, Georgia, serif !important;
-		font-size: 0.85rem !important
-	}
-	select{
-		font-family: Cambria, Georgia, serif !important
-	}
-	button{
-		font-family: Cambria, Georgia, serif !important
-	}
-	.observablehq-viewof-n-string .observablehq {
-		padding-top: 10px;
-		padding-bottom: 10px
-	}
-/*
-	.observablehq-viewof-duration div {
-		display: inline
-	}
-*/
-	.observablehq-viewof-n_string form div{
-		display: inline;
-		font-family: Cambria, Georgia, serif
-	}
-	.observablehq-viewof-duration form div{
-		display: inline;
 		
 	}
-	.observablehq-viewof-n_string form div div{
-		padding-left: 20px
+	
+.observablehq-viewof-keyframe_date{
+		display: inline!important;
+        transform: translateY(-2px);
 	}
-	.observablehq-viewof-duration form div div{
-		padding-left: 20px
+
+.observablehq-viewof-duration {
+    display:none	
 	}
-	#stock-market-change{
-		font-family: Cambria, Georgia, serif
+	
+output{
+		font-family: Cambria, Georgia, serif !important;
+		font-size:  0.85rem !important;
+/*		color:#e3e3e3*/
 	}
-/*
-	.observablehq-viewof-n_string  form{
-		display: inline
+	
+select{
+		font-family: Cambria, Georgia, serif !important
 	}
-*/
+	
+button{
+		font-family: Cambria, Georgia, serif !important;
+/*	  font-size: 1rem !important*/
+	}
+
+
+.observablehq-viewof-n_string form div div{
+		display: inline!important;
+		font-family: Cambria, Georgia, serif;
+	}
+	
+#grid-container {
+  display: grid ;
+  grid-template-columns: 1fr 20px 3fr 20px 1fr
+  grid-template-rows:  100%;
+  margin-bottom: 15px;
+  vertical-align: top
+}
+.observablehq-viewof-n_string{
+  grid-column-start: 0;
+  grid-column-end: 1;
+}
+.observablehq-viewof-keyframe_date{
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.observablehq-legend{
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+
 </style>
 <div id="observablehq-e6c37a18">
   <div class="observablehq-Title"></div>
+<!--<h2>2020 Quiver Stock Selections</h2>-->
+<h5>Maximum Gains</h5>
+<div id='grid-container'>
   <div class="observablehq-viewof-n_string"></div>
-  <div class="observablehq-viewof-duration"></div>
+  
   <div class="observablehq-viewof-keyframe_date"></div>
-  <div class="observablehq-update"></div>
   <div class="observablehq-legend"></div>
+</div>
+  <div class="observablehq-update"></div>
+ <div class="observablehq-viewof-duration"></div>
   <div class="observablehq-chart"></div>
   <div class="observablehq-linechart2"></div>
   <div class="observablehq-update2"></div>
