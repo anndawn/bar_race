@@ -2,111 +2,118 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Bar Chart Race</title>
+<title>Untitled Document</title>
 </head>
-<body>
 <style>
-h2#2020-quiver-stock-selections{ display:none!important}
-	h3 {text-align: center;margin: 0}
-	h5 {text-align: center;margin-top: 2px;margin-bottom: 5px}
-.observablehq-update2{
-		display: none
-	}
-.observablehq-update  
-	{
-		display: none
-	}
+*{margin:0}
 
-
- .O-1{
-		font-size: 12px;
-		font-weight: bold;
-	    font-family: Cambria, Georgia, serif
-		
-	}
+.bar-race{ font-family: Cambria, Georgia, serif!important; position: relative}
+.observablehq-update2,.observablehq-update {display:none;height:0px}
 	
-.observablehq-viewof-keyframe_date{
-		display: inline!important;
-        transform: translateY(-2px);
-	}
-
-.observablehq-viewof-duration {
-    display:none	
-	}
+.bar-race h3 {text-align: center;  vertical-align: middle;}
+.bar-race h5 {text-align: center;  vertical-align: middle;}
 	
-output{
-		font-family: Cambria, Georgia, serif !important;
-		font-size:  0.85rem !important;
-/*		color:#e3e3e3*/
+.bar-race .observablehq-viewof-n_string form div div{display: inline-block;}
+#big-container{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 5px 25px 4px 10px 2px 3fr 10px 20fr 5px 10fr;	
+  height: 100vh;
+  justify-content: center;
+  align-items: center
+}
+.bar-race .observablehq-Title{
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.bar-race .observablehq-subtitle{
+  grid-row-start: 4;
+  grid-row-end: 5;
 	}
-	
-select{
-		font-family: Cambria, Georgia, serif !important
-	}
-	
-button{
-		font-family: Cambria, Georgia, serif !important;
-/*	  font-size: 1rem !important*/
-	}
-
-
-.observablehq-viewof-n_string form div div{
-		display: inline!important;
-		font-family: Cambria, Georgia, serif;
-	}
-	
-#grid-container {
-  display: grid ;
-  grid-template-columns: 1fr 20px 3fr 20px 1fr
+.bar-race .observablehq-chart{
+  grid-row-start: 8;
+  grid-row-end: 9;
+}
+.bar-race .observablehq-linechart2{
+  grid-row-start: 10;
+  grid-row-end: 11;
+}
+.bar-race .observablehq-viewof-keyframes{
+ position: absolute;
+ top: 15%;
+ left: 50%;
+ transform: translateX(-50%)
+}
+.bar-race #grid-container {
+  grid-row-start: 6;
+  grid-row-end: 7;
+  display: grid;
+  grid-template-columns:3px 2fr 50px 3fr 20px 1fr 10px;
   grid-template-rows:  100%;
-  margin-bottom: 15px;
-  vertical-align: top
+  vertical-align: top;
+  font-size:0.85rem;
+  justify-content: center;
+  align-items: center
 }
-.observablehq-viewof-n_string{
-  grid-column-start: 0;
-  grid-column-end: 1;
-}
-.observablehq-viewof-keyframe_date{
+	
+.bar-race #grid-container .observablehq-viewof-n_string{
   grid-column-start: 2;
   grid-column-end: 3;
 }
-.observablehq-legend{
+.bar-race #grid-container .observablehq-viewof-keyframe_date{
   grid-column-start: 4;
   grid-column-end: 5;
+  transform: translateY(-2px);
 }
+	
+.bar-race #grid-container .observablehq-legend{
+  grid-column-start: 6;
+  grid-column-end: 7;
+
+}
+.bar-race .observablehq-legend .O-1{
+		font-size: 0.7rem;
+		font-weight: bold;		
+	}
 
 </style>
-<div id="observablehq-e6c37a18">
+<body>
+
+<div id="observablehq-2097eb59" class='bar-race'>
+<div id="big-container">
   <div class="observablehq-Title"></div>
-<!--<h2>2020 Quiver Stock Selections</h2>-->
-<h5>Maximum Gains</h5>
-<div id='grid-container'>
-  <div class="observablehq-viewof-n_string"></div>
-  
-  <div class="observablehq-viewof-keyframe_date"></div>
-  <div class="observablehq-legend"></div>
-</div>
-  <div class="observablehq-update"></div>
- <div class="observablehq-viewof-duration"></div>
+  <div class="observablehq-subtitle"></div>
+	
+  <div id='grid-container'>
+    <div class="observablehq-viewof-n_string"></div>
+    <div class="observablehq-viewof-keyframe_date"></div>
+    <div class="observablehq-legend"></div>
+  </div>
   <div class="observablehq-chart"></div>
   <div class="observablehq-linechart2"></div>
-  <div class="observablehq-update2"></div>
-  
-  <div class="observablehq-viewof-keyframes"></div>
 </div>
+  <div class="observablehq-update"></div>
+  <div class="observablehq-update2"></div>
+  <div class="observablehq-viewof-keyframes"></div>
+
+</div>
+
 <script type="module">
+  setTimeout(function(){console.log(document.body.clientWidth) }, 1000);
   import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
   import define from "https://api.observablehq.com/@anndawn/bar-chart-race.js?v=3";
   (new Runtime).module(define, name => {
-    if (name === "Title") return Inspector.into("#observablehq-e6c37a18 .observablehq-Title")();
-    if (name === "viewof n_string") return Inspector.into("#observablehq-e6c37a18 .observablehq-viewof-n_string")();
-    if (name === "update") return Inspector.into("#observablehq-e6c37a18 .observablehq-update")();
-    if (name === "viewof keyframe_date") return Inspector.into("#observablehq-e6c37a18 .observablehq-viewof-keyframe_date")();
-    if (name === "legend") return Inspector.into("#observablehq-e6c37a18 .observablehq-legend")();
-    if (name === "chart") return Inspector.into("#observablehq-e6c37a18 .observablehq-chart")();
-    if (name === "linechart2") return Inspector.into("#observablehq-e6c37a18 .observablehq-linechart2")();
-    if (name === "update2") return Inspector.into("#observablehq-e6c37a18 .observablehq-update2")();
-    if (name === "viewof duration") return Inspector.into("#observablehq-e6c37a18 .observablehq-viewof-duration")();
-    if (name === "viewof keyframes") return Inspector.into("#observablehq-e6c37a18 .observablehq-viewof-keyframes")();
+    if (name === "Title") return Inspector.into("#observablehq-2097eb59 .observablehq-Title")();
+    if (name === "subtitle") return Inspector.into("#observablehq-2097eb59 .observablehq-subtitle")();
+    if (name === "viewof n_string") return Inspector.into("#observablehq-2097eb59 .observablehq-viewof-n_string")();
+    if (name === "update") return Inspector.into("#observablehq-2097eb59 .observablehq-update")();
+    if (name === "viewof keyframe_date") return Inspector.into("#observablehq-2097eb59 .observablehq-viewof-keyframe_date")();
+    if (name === "legend") return Inspector.into("#observablehq-2097eb59 .observablehq-legend")();
+    if (name === "chart") return Inspector.into("#observablehq-2097eb59 .observablehq-chart")();
+    if (name === "linechart2") return Inspector.into("#observablehq-2097eb59 .observablehq-linechart2")();
+    if (name === "update2") return Inspector.into("#observablehq-2097eb59 .observablehq-update2")();
+    if (name === "viewof keyframes") return Inspector.into("#observablehq-2097eb59 .observablehq-viewof-keyframes")();
   });
 </script>
+</body>
+</html>
